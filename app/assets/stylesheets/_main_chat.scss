@@ -8,22 +8,23 @@
       border-bottom: solid 1px #eee;
       display: flex;
       justify-content: space-between;
-    }
-    &__RightHeader__group{
-      box-sizing: border-box;
-    }
-      &__RightHeader__group__Name{
-        color: #333333;
-        font-size: 20px;
-        margin-top: 35px;
+
+      &__group{
+        box-sizing: border-box;
+        &__Name{
+          color: #333333;
+          font-size: 20px;
+          margin-top: 35px;
+        }
+        &__memberList{
+          color: #999999;
+          font-size: 12px;
+          margin-top: 15px;
+          display: flex;
+        }
+
       }
-      &__RightHeader__group__memberList{
-        color: #999999;
-        font-size: 12px;
-        margin-top: 15px;
-        display: flex;
-      }
-      &__RightHeader__Edit{
+      &__Edit{
         font-size: 16px;
         margin-top: 28px;
         height: 40px;
@@ -37,6 +38,11 @@
           text-decoration: none;
         }
       }      
+
+    }
+      
+      
+      
 }
 
 .main__MessageField{
@@ -101,35 +107,16 @@
     }
     &__Hidden{
       display: none;
-    }
-    
-    &__submitBtn{
-      background-color: #38aef0;
-      border: none;
-      color: #ffffff;
-      font-size: 16px;
-      height: 50px;
-      margin-left: 15px;
-      padding: 0px 30px;
-
-    }
-
-
-    
+      
+  }
+  &__submitBtn{
+    background-color: #38aef0;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0px 30px;
 
   }
-
-
-
-
-    
-    
-    
-
-    
-
-
-    
-
-
-
+  }
