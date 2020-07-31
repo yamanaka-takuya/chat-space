@@ -1,0 +1,37 @@
+.main
+  .main__RightHeader
+    .main__RightHeader__group
+      .main__RightHeader__group__Name
+        sss
+      .main__RightHeader__group__memberList
+        Member
+    .main__RightHeader__Edit
+      = link_to 'Edit', '#', class:"main__RightHeader__Editlink" 
+      
+      
+
+  .main__MessageField
+    .main__MessageField__Info
+      .main__MessageField__Info__username
+        kk
+      .main__MessageField__Info__time
+        10:15
+         
+        
+    
+    .main__MessageField__message
+      おはよう
+  .main__Footer
+    .Form
+      %form.Form__contents
+        .Form__inputBox
+          %input.Form__inputText{"placeholder": "type a message", "type": "text"}
+          %label.Form__inputImage 
+            = icon('far', 'image')
+            %input{type: "file" , class: "Form__Hidden"}
+        
+            
+            
+        
+        %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
+      
