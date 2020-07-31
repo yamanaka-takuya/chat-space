@@ -1,0 +1,57 @@
+.wrapper{
+  display: flex;
+}
+
+.Side {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+    &__LeftHeader{
+      background-color: #253141;
+      height: 100px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      &__list{
+        height:20px;
+        width:260px;
+        display:flex;
+        justify-content: space-between;
+        &--left{
+          color: #ffffff;
+        }
+        &--right{
+          &--edit{
+            color: #ffffff;
+            text-decoration: none;
+          }
+          &--cog{
+            color: #ffffff;
+          }
+        }
+        
+      }
+    }
+    &__GroupList{
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+      padding: 0 20px;
+      overflow: scroll;
+      .group{
+        box-sizing: border-box;
+        padding: 20px 0 40px;
+        &__name {
+          font-size: 15px;
+          color: seashell;
+        }
+        &__message{
+          font-size: 11px;
+          margin-top: 5px;
+          color: seashell;
+        }
+      }
+    }
+
+     
+      
+}
