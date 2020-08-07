@@ -13,7 +13,14 @@
 
   .main__MessageField
     = render @messages
- 
+    -# .main__MessageField__Info
+    -#   .main__MessageField__Info__username
+    -#     kk
+    -#   .main__MessageField__Info__time
+    -#     10:15
+         
+    -# .main__MessageField__message
+    -#   おはよう
   .main__Footer
     .Footer
       = form_with model: [@group, @message], html: {class: "Form__contents"}, local: true do |f|
