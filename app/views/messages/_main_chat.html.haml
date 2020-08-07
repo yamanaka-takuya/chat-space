@@ -2,28 +2,27 @@
   .main__RightHeader
     .main__RightHeader__group
       .main__RightHeader__group__Name
-        sss
+        = @group.name
       .main__RightHeader__group__memberList
-        Member
+        - @group.users.each do |user|
+          = user.name
+
     .main__RightHeader__Edit
-      = link_to 'Edit', '#', class:"main__RightHeader__Editlink" 
+      = link_to edit_group_path(@group) do
+        edit
 
   .main__MessageField
-    .main__MessageField__Info
-      .main__MessageField__Info__username
-        kk
-      .main__MessageField__Info__time
-        10:15
-         
-    .main__MessageField__message
-      おはよう
+    = render @messages
+ 
   .main__Footer
-    .Form
-      %form.Form__contents
+    .Footer
+      = form_with model: [@group, @message], html: {class: "Form__contents"}, local: true do |f|
         .Form__inputBox
-          %input.Form__inputText{"placeholder": "type a message", "type": "text"}
-          %label.Form__inputImage 
-            = icon('far', 'image')
-            %input{type: "file" , class: "Form__Hidden"}
-        %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
+          = f.text_field :content, class: 'Form__inputText', placeholder: 'type a message'
+          = f.label :image, class: 'Form__inputImage ' do
+            = icon('far', 'image', class: 'Form__icon')
+            = f.file_field :image, class: 'Form__Hidden'
+        = f.submit 'Send', class: 'Form__submitBtn'
+
+
       
