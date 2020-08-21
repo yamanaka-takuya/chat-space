@@ -41,7 +41,6 @@ $(function(){
     }
   
     $('.Form__contents').on('submit', function(e){
-      // console.log("test")
       e.preventDefault();
       let formData = new FormData(this);
       let url = $(this).attr('action');
@@ -63,7 +62,7 @@ $(function(){
         alert("メッセージ送信に失敗しました");
     })
       .always(function(){
-        $('.Form__submitBtn').removeAttr("disabled");
+        $('.Form__submitBtn').prop('disabled', false);
     });
   });
 })
