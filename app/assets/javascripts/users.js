@@ -47,6 +47,7 @@ $(function() {
         return false;
       } else {
         addNoUser();
+      }
     })
     .fail(function() {
       alert("通信エラーです。ユーザーが表示できません。");
