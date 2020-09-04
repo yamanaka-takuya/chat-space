@@ -42,10 +42,8 @@ $(function(){
   }
 
   let reloadMessages = function() {
-    console.log("test")
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     let last_message_id = $('.MessageBox:last').data("message-id") || 0;
-    console.log(last_message_id)
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -53,12 +51,10 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log(messages)
       if (messages.length !== 0) {
         let insertHTML = '';
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
-          console.log(insertHTML)
         });
         $('.main__MessageField').append(insertHTML);
         $('.main__MessageField').animate({ scrollTop: $('.main__MessageField')[0].scrollHeight});
